@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 11af2da1a414c104da5b16aeaa6f7915
+guid: b1dbb48ddc102ec43966661e8603b82f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2838231755752363713
-    second: Andy_Idle_0
-  - first:
-      213: 2413963981052642046
-    second: Andy_Idle_1
-  - first:
-      213: 3438144099404781619
-    second: Andy_Idle_2
-  - first:
-      213: 7646906756991398053
-    second: Andy_Idle_3
+      213: -6939466520582521351
+    second: Arcade_Interior_HorizontalWalls_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -135,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Andy_Idle_0
+      name: Arcade_Interior_HorizontalWalls_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 48
+        y: 63
+        width: 930
+        height: 1282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,74 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c65ad78ebc636720800000000000000
-      internalID: 2838231755752363713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Andy_Idle_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ef20b37737f108120800000000000000
-      internalID: 2413963981052642046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Andy_Idle_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 33890a3a7ddb6bf20800000000000000
-      internalID: 3438144099404781619
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Andy_Idle_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a0b1013e254f1a60800000000000000
-      internalID: 7646906756991398053
+      spriteID: 9fd76f567ff02bf90800000000000000
+      internalID: -6939466520582521351
       vertices: []
       indices: 
       edges: []
@@ -226,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b7aa6ae1274511741a7d6c7d391824c1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Andy_Idle_0: 2838231755752363713
-      Andy_Idle_1: 2413963981052642046
-      Andy_Idle_2: 3438144099404781619
-      Andy_Idle_3: 7646906756991398053
+      Arcade_Interior_HorizontalWalls_0: -6939466520582521351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
