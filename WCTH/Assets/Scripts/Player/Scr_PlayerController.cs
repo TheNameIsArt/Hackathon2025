@@ -27,7 +27,7 @@ public class Scr_PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        /*interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");*/
+        interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");
     }
 
     void Start()
@@ -82,13 +82,12 @@ public class Scr_PlayerController : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         interactionZone = collision.gameObject;
 
         if (collision.gameObject.tag == "InteractionZone")
         {
-            targetSceneName = interactionZone.GetComponent<Interaction_Controller>().targetSceneName;
             isInteractionZone = true;
             interactionButton.SetActive(true);
         }
@@ -121,7 +120,6 @@ public class Scr_PlayerController : MonoBehaviour
         {
             if (context.performed && isInteractionZone)
             {
-                SceneManager.LoadScene(targetSceneName);
                 Debug.Log("INTERACT!");
             }
             else if (context.performed && isConversationZone)
@@ -135,7 +133,7 @@ public class Scr_PlayerController : MonoBehaviour
                 interactionButton.SetActive(false); // Hide the interaction button
             }
         }
-    }*/
+    }
 
     private void OnActionChange(object obj, InputActionChange change)
     {
