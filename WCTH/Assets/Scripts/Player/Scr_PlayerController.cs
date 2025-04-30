@@ -1,23 +1,43 @@
+using DialogueEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class Scr_PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
+    public float moveSpeed;
+    public InputDevice inputDevice;
+    private GameObject interactionZone;
+    private PlayerInput playerInput;
+
+    private string targetSceneName;
+    //private NPCConversation targetConversation;
+    private Vector2 moveInput;
     private Rigidbody2D rb;
     private Animator animator;
-    private InputDevice inputDevice;
-    private Vector2 moveInput;
-    public Joystick joystick;
+    private GameObject interactionButton;
+    private bool isConversationZone;
+    private bool isInteractionZone;
+    [SerializeField] private bool isConversationActive = false;
+
+    private ConversationEditer conversationEditor; // Reference to the ConversationEditor
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        /*interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");*/
+    }
 
+    void Start()
+    {
         InputSystem.onActionChange += OnActionChange;
+        if (interactionButton != null)
+        {
+            interactionButton.SetActive(false);
+        }
+        playerInput = GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
@@ -25,14 +45,14 @@ public class Scr_PlayerController : MonoBehaviour
     {
         rb.linearVelocity = moveInput * moveSpeed;
         Animate();
-    }
-    private void OnActionChange(object obj, InputActionChange change)
-    {
-        if (change == InputActionChange.ActionPerformed)
+
+
+        if (ConversationManager.Instance != null)
         {
-            var inputAction = (InputAction)obj;
-            var lastControl = inputAction.activeControl;
-            inputDevice = lastControl.device;
+            if (!ConversationManager.Instance.IsConversationActive && !playerInput.enabled)
+            {
+                playerInput.enabled = true; // Enable the PlayerInput component
+            }
         }
     }
 
@@ -62,4 +82,69 @@ public class Scr_PlayerController : MonoBehaviour
         }
     }
 
+    /*private void OnTriggerStay2D(Collider2D collision)
+    {
+        interactionZone = collision.gameObject;
+
+        if (collision.gameObject.tag == "InteractionZone")
+        {
+            targetSceneName = interactionZone.GetComponent<Interaction_Controller>().targetSceneName;
+            isInteractionZone = true;
+            interactionButton.SetActive(true);
+        }
+        else if (collision.gameObject.tag == "ConversationZone")
+        {
+            //targetConversation = interactionZone.GetComponent<NPCConversation>();
+            conversationEditor = interactionZone.GetComponent<ConversationEditer>();
+            isConversationZone = true;
+            if (!isConversationActive)
+                interactionButton.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (interactionButton != null)
+        {
+            if (collision.gameObject.tag == "InteractionZone" || collision.gameObject.tag == "ConversationZone")
+            {
+                interactionButton.SetActive(false);
+                isInteractionZone = false;
+                isConversationZone = false;
+            }
+        }
+    }
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (interactionButton != null)
+        {
+            if (context.performed && isInteractionZone)
+            {
+                SceneManager.LoadScene(targetSceneName);
+                Debug.Log("INTERACT!");
+            }
+            else if (context.performed && isConversationZone)
+            {
+                if (conversationEditor != null)
+                {
+                    conversationEditor.PlayConversation();
+                    Debug.Log("Conversation started!");
+                }
+                playerInput.enabled = false; // Disable the PlayerInput component
+                interactionButton.SetActive(false); // Hide the interaction button
+            }
+        }
+    }*/
+
+    private void OnActionChange(object obj, InputActionChange change)
+    {
+        if (change == InputActionChange.ActionPerformed)
+        {
+            var inputAction = (InputAction)obj;
+            var lastControl = inputAction.activeControl;
+            inputDevice = lastControl.device;
+        }
+    }
 }
+
