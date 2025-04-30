@@ -30,7 +30,7 @@ public class AsteroidSpawner : MonoBehaviour
             asteroid.transform.position = new Vector2(xSpawn, randomY);
 
             Rigidbody2D rb = asteroid.GetComponent<Rigidbody2D>();
-            rb.velocity = Vector2.left * moveSpeed;
+            rb.linearVelocity = Vector2.left * moveSpeed;
             }
         }
     }
