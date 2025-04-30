@@ -24,18 +24,14 @@ public class AsteroidSpawner : MonoBehaviour
             GameObject asteroid = AsteroidPool.sharedInstance.GetPooledObject(); 
 
             if (asteroid != null)
-{
+            {
             asteroid.SetActive(true);  // This makes it visible
             float randomY = Random.Range(minYSpawn, maxYSpawn);
             asteroid.transform.position = new Vector2(xSpawn, randomY);
 
             Rigidbody2D rb = asteroid.GetComponent<Rigidbody2D>();
             rb.velocity = Vector2.left * moveSpeed;
-}
-
-
+            }
         }
     }
-
-    
 }
