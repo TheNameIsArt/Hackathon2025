@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 public class Scr_PlayerController : MonoBehaviour
 {
@@ -59,4 +60,5 @@ public class Scr_PlayerController : MonoBehaviour
             animator.Play("Andy_Idle");
         }
     }
+
 }
