@@ -284,7 +284,6 @@ GameObject:
   - component: {fileID: 3900108755196472087}
   - component: {fileID: 3900108755196472086}
   - component: {fileID: 3900108755062758274}
-  - component: {fileID: 5284907947377465155}
   m_Layer: 5
   m_Name: ConversationManager
   m_TagString: Untagged
@@ -342,9 +341,8 @@ MonoBehaviour:
   ButtonPrefab: {fileID: 6120265339105655453, guid: 1d48feb1cf04aec499db38c5c2abd76c, type: 3}
   BlankSprite: {fileID: 21300000, guid: 70e433de46068504fa56fcf7f49b32b1, type: 3}
   skipAllowed: 0
-  isEnded: 0
-  hasAdvanced: 0
   m_targetScrollTextCount: 0
+  minigameActive: 0
 --- !u!82 &3900108755062758274
 AudioSource:
   m_ObjectHideFlags: 0
@@ -442,19 +440,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5284907947377465155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3900108755062758285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e34d1c2f0fac5f47ac501fa7897708f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputActionsAsset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!1 &3900108755107041016
 GameObject:
   m_ObjectHideFlags: 0
