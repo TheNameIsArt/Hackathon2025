@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WCHS_Gearhart_0: -4116758347527672787
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
