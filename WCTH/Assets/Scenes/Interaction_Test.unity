@@ -974,6 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14517ff75fdc0424ea203c4631042c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 575816748}
   spacing: 1.4
 --- !u!1 &643501483 stripped
 GameObject:
