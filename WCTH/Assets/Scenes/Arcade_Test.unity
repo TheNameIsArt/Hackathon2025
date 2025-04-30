@@ -898,7 +898,7 @@ GameObject:
   - component: {fileID: 884339406}
   - component: {fileID: 884339405}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Control Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1129,6 +1129,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button1: {fileID: 1619493589}
+  imageToMove: {fileID: 1619493590}
+  moveSpeed: 2000
+  smoothing: 0.1
+  maxVerticalMovement: 1080
+  flatThreshold: 0.8
+  controlCanvas: {fileID: 884339407}
 --- !u!4 &1145377460
 Transform:
   m_ObjectHideFlags: 0
@@ -1495,17 +1501,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619493589}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.61, y: 2.61, z: 2.61}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2033729050}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.000010431}
-  m_SizeDelta: {x: 265.9946, y: 265.9946}
+  m_SizeDelta: {x: 1600, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1619493591
 MonoBehaviour:
@@ -1527,7 +1533,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -7639606596546455448, guid: 09ae68983fa60354eae45a0696a8110f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
