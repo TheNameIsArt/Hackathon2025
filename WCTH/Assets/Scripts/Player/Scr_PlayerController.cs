@@ -9,6 +9,7 @@ public class Scr_PlayerController : MonoBehaviour
     private Animator animator;
     private InputDevice inputDevice;
     private Vector2 moveInput;
+    public Joystick joystick;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
