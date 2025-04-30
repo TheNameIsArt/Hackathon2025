@@ -138,10 +138,10 @@ TextureImporter:
       name: Andy_Idle_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 8
-        width: 26
-        height: 50
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: Andy_Idle_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 8
-        width: 26
-        height: 50
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: Andy_Idle_2
       rect:
         serializedVersion: 2
-        x: 147
-        y: 8
-        width: 26
-        height: 51
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: Andy_Idle_3
       rect:
         serializedVersion: 2
-        x: 211
-        y: 8
-        width: 26
-        height: 51
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b7aa6ae1274511741a7d6c7d391824c1
     internalID: 0
     vertices: []
     indices: 
