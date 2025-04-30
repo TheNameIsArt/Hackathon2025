@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WCHS_LittleCarl_0: -8884645379426435504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
