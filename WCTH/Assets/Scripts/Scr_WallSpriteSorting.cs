@@ -25,7 +25,7 @@ public class Scr_WallSpriteSorting : MonoBehaviour
         {
             wallSprite.enabled = wallSprite.enabled;
         }
-        else
+        else if (underWall == false)
         {
             wallSprite.enabled = !wallSprite.enabled;
         }

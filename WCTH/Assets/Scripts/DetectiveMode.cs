@@ -35,7 +35,6 @@ public class DetectiveMode : MonoBehaviour
         // Check if the phone is flat (z-axis close to -1)
         if (Mathf.Abs(acceleration.z) > flatThreshold)
         {
-            Debug.Log("Phone is flat. Ignoring mode switching.");
             return; // Ignore mode switching if the phone is flat
         }
 
@@ -44,20 +43,16 @@ public class DetectiveMode : MonoBehaviour
         {
             button1.SetActive(false);
             controlCanvas.enabled = true; // Enable the control canvas
-            Debug.Log("Phone is in portrait mode (upright). Button is visible.");
-
-            // Move the image vertically using gyroscope data
-
         }
         else
         {
             button1.SetActive(true);
             controlCanvas.enabled = false; // Disable the control canvas
-            Debug.Log("Phone is in landscape mode (horizontal). Button is hidden.");
+
             if (isGyroEnabled && imageToMove != null)
             {
-                // Use the gyroscope's rotation rate for vertical movement
-                float verticalMovement = Input.gyro.rotationRateUnbiased.x * moveSpeed * Time.deltaTime;
+                // Use the gyroscope's rotation rate for vertical movement (inverted)
+                float verticalMovement = -Input.gyro.rotationRateUnbiased.x * moveSpeed * Time.deltaTime;
 
                 // Apply smoothing to the movement
                 smoothedPosition = Vector2.Lerp(smoothedPosition, new Vector2(0, verticalMovement), smoothing);
