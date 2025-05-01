@@ -209,17 +209,6 @@
                     "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b56e90e7-4051-4ea3-a456-ef6c1f0c9acc",
-                    "path": "<Keyboard>/t",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }
