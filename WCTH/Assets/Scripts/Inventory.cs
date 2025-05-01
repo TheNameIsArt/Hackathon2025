@@ -14,7 +14,7 @@ public class Inventory : MonoBehaviour
         inventoryUI = Object.FindFirstObjectByType<InventoryUI>();
 
         // Deactivate all item prefabs at the start
-        for (int i = 1; i <= 10; i++) // Assuming a maximum of 10 item prefabs
+        for (int i = 1; i <= 8; i++) // Assuming a maximum of 8 item prefabs
         {
             GameObject itemPrefab = GameObject.Find("Item" + i);
             if (itemPrefab != null)
