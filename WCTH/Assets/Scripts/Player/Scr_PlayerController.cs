@@ -8,17 +8,18 @@ public class Scr_PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public InputDevice inputDevice;
-    private GameObject interactionZone;
-    private PlayerInput playerInput;
 
+    private bool isConversationZone;
+    private bool isInteractionZone;
     private string targetSceneName;
     private Vector2 moveInput;
     private Rigidbody2D rb;
     private Animator animator;
+    private GameObject interactionZone;
+    private PlayerInput playerInput;
     private GameObject interactionButton;
     private GameObject speechButton;
-    private bool isConversationZone;
-    private bool isInteractionZone;
+    
     [SerializeField] private bool isConversationActive = false;
     [SerializeField] Button ConversationButton;
 
@@ -94,6 +95,7 @@ public class Scr_PlayerController : MonoBehaviour
         {
             isInteractionZone = true;
             interactionButton.SetActive(true);
+            interactionButton.GetComponent<InteractionButton>().lookSprite = true;
             detectiveMode = interactionZone.GetComponent<InteractionZone>().detectiveMode;
 
 
@@ -109,6 +111,7 @@ public class Scr_PlayerController : MonoBehaviour
             isConversationZone = true;
             if (!isConversationActive)
                 speechButton.SetActive(true);
+                speechButton.GetComponent<InteractionButton>().talkSprite = true;
                 ConversationButton.interactable = true;
         }
     }
@@ -123,6 +126,8 @@ public class Scr_PlayerController : MonoBehaviour
                 speechButton.SetActive(false);
                 isInteractionZone = false;
                 isConversationZone = false;
+                interactionButton.GetComponent<InteractionButton>().lookSprite = false;
+                speechButton.GetComponent<InteractionButton>().talkSprite = false;
                 ConversationButton.interactable = false;
 
                 // Disable "Detective Mode" when exiting the InteractionZone
