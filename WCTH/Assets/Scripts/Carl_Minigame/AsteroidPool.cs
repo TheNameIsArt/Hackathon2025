@@ -6,7 +6,7 @@ public class AsteroidPool : MonoBehaviour
     public static AsteroidPool sharedInstance;
     public List<GameObject> pooledObjects;
     public GameObject asteroidPrefab; 
-    private int amountToPool = 5;
+    private int amountToPool = 8;
 
     void Awake()
 {   
