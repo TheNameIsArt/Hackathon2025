@@ -8,7 +8,10 @@ public class Scr_InventroyTest : MonoBehaviour
     [SerializeField] private GameObject tp;
     [SerializeField] private GameObject videoTape;
     [SerializeField] private GameObject concertTicket;
+    [SerializeField] private GameObject balloon;
+
     [SerializeField] private GameObject inventoryManager;
+    
 
     [SerializeField] private GameObject slot1;
     [SerializeField] private GameObject slot2;
@@ -19,8 +22,8 @@ public class Scr_InventroyTest : MonoBehaviour
 
     private Transform itemPosition;
     private int itemsFound = 0;
+    private bool twoTickets = false;
 
-    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,6 +57,11 @@ public class Scr_InventroyTest : MonoBehaviour
         else if (itemsFound == 5)
         {
             itemPosition = slot6.transform;
+        }
+
+        if (twoTickets) 
+        {
+            
         }
 
     }
@@ -107,6 +115,23 @@ public class Scr_InventroyTest : MonoBehaviour
             concertTicket.SetActive(true);
             concertTicket.transform.position = itemPosition.position;
             itemsFound++;
+        }
+    }
+    public void Inventory6(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Inventory 6 Pressed");
+            balloon.SetActive(true);
+            balloon.transform.position = itemPosition.position;
+            itemsFound++;
+        }
+    }
+    public void Inventory7(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            twoTickets = true;
         }
     }
     /*public void ItemTransform()
