@@ -13,6 +13,16 @@ public class Inventory : MonoBehaviour
     {
         inventoryUI = Object.FindFirstObjectByType<InventoryUI>();
 
+        // Deactivate all item prefabs at the start
+        for (int i = 1; i <= 10; i++) // Assuming a maximum of 10 item prefabs
+        {
+            GameObject itemPrefab = GameObject.Find("Item" + i);
+            if (itemPrefab != null)
+            {
+                itemPrefab.SetActive(false);
+            }
+        }
+
         CloseInventory();
     }
 
@@ -55,9 +65,14 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            foreach (var item in items)
+            for (int i = 0; i < items.Count; i++)
             {
-                Debug.Log("Item: " + item);
+                GameObject itemPrefab = GameObject.Find("Item" + (i + 1));
+                if (itemPrefab != null)
+                {
+                    itemPrefab.SetActive(true);
+                    Debug.Log("Activated: " + itemPrefab.name);
+                }
             }
         }
     }
