@@ -17,7 +17,7 @@ public class Noirify : MonoBehaviour
         Player.GetComponent<Renderer>().material = noirColour;
         Debug.Log("Added Noir material");
 
-        Player.transform.position = new Vector3(-6.9f, -3.25f, 0);
+        Player.transform.position = new Vector3(-3.8f, -1.7f, 0);
 
     }
 
