@@ -1923,7 +1923,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localCamera: {fileID: 0}
-  virtualCamera: {fileID: 0}
   cameraSwitched: 0
 --- !u!4 &1124441534
 Transform:

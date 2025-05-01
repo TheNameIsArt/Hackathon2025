@@ -672,6 +672,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2abea787c0130498cf0f721b2b9f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &289682337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5999279754707159002, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
+  m_PrefabInstance: {fileID: 1345304430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &459060867
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +794,7 @@ Transform:
   m_GameObject: {fileID: 473445925}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.6373386, y: -5.6183453, z: 0.12225723}
+  m_LocalPosition: {x: -4.552662, y: 12.931655, z: 0.12225723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1189,7 +1194,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1568569980}
+        m_TargetAssemblyTypeName: SetActiveInteractionZone, Assembly-CSharp
+        m_MethodName: ActivateObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 3
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -1619,7 +1636,7 @@ Transform:
   m_GameObject: {fileID: 1017735510}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.6373386, y: -5.6183453, z: 0.12225723}
+  m_LocalPosition: {x: 3.6071465, y: 12.932935, z: 0.12225723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2016,7 +2033,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localCamera: {fileID: 0}
-  virtualCamera: {fileID: 0}
   cameraSwitched: 0
 --- !u!4 &1124441534
 Transform:
@@ -2130,11 +2146,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1976125642312169622, guid: 24f757cd5de14874db02c630745c869b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.85
+      value: -5.29
       objectReference: {fileID: 0}
     - target: {fileID: 1976125642312169622, guid: 24f757cd5de14874db02c630745c869b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.11
+      value: 9.89
       objectReference: {fileID: 0}
     - target: {fileID: 1976125642312169622, guid: 24f757cd5de14874db02c630745c869b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2394,6 +2410,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1087757706837983531, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4761642475423855253, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
       propertyPath: detectiveMode
       value: 
@@ -2406,21 +2426,37 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7039549638561058784, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
+      propertyPath: m_Radius
+      value: 0.22885911
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039549638561058784, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.43113723
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039549638561058784, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0065350025
+      objectReference: {fileID: 0}
     - target: {fileID: 9080065902988415661, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
       propertyPath: m_LocalScale.x
-      value: 12.783974
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9080065902988415661, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
       propertyPath: m_LocalScale.y
-      value: 11.9462805
+      value: 2.8034196
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080065902988415661, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1733441
       objectReference: {fileID: 0}
     - target: {fileID: 9080065902988415661, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.0327
+      value: -12.15
       objectReference: {fileID: 0}
     - target: {fileID: 9080065902988415661, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.1373
+      value: 9.86
       objectReference: {fileID: 0}
     - target: {fileID: 9080065902988415661, guid: 573c5deac9a1da840bc63ab1d5c0f9ff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2570,7 +2606,7 @@ Transform:
   m_GameObject: {fileID: 1407729794}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.6373386, y: -5.6183453, z: 0.12225723}
+  m_LocalPosition: {x: -4.552662, y: 12.931655, z: 0.12225723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2912,6 +2948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1568569978}
   - component: {fileID: 1568569979}
+  - component: {fileID: 1568569980}
   m_Layer: 0
   m_Name: Pinboy Conversation 3
   m_TagString: Untagged
@@ -2948,9 +2985,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 4
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":48.5,"yPos":21},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"There
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":325,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"There
     must anthoer clue here somewhere. Here, take this magnifying glass, and help
-    me look","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Pinboy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":47,"yPos":156},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    me look","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Pinboy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":323.5,"yPos":157},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"If
     a magnifying glass appears above your head, flip your phone to go into detective
     mode and look for items to add to your inventory.\r\n","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Pinboy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -2965,7 +3002,32 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1568569980}
+        m_TargetAssemblyTypeName: SetActiveInteractionZone, Assembly-CSharp
+        m_MethodName: ActivateObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1568569980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568569977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6252efd692832ff4e894e7c4a1599536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 289682337}
 --- !u!1001 &1653821508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3178,7 +3240,7 @@ Transform:
   m_GameObject: {fileID: 1794403246}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.6373386, y: -5.6183453, z: 0.12225723}
+  m_LocalPosition: {x: -4.552662, y: 12.931655, z: 0.12225723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3328,7 +3390,7 @@ Transform:
   m_GameObject: {fileID: 1840918564}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.6373386, y: -5.6183453, z: 0.12225723}
+  m_LocalPosition: {x: -4.552662, y: 12.931655, z: 0.12225723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3416,11 +3478,11 @@ PrefabInstance:
       objectReference: {fileID: 470544129}
     - target: {fileID: 8030167035946091498, guid: f97c326e58f19da449618d22a6ef031a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.04
+      value: -2.15
       objectReference: {fileID: 0}
     - target: {fileID: 8030167035946091498, guid: f97c326e58f19da449618d22a6ef031a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.29
+      value: 5.26
       objectReference: {fileID: 0}
     - target: {fileID: 8030167035946091498, guid: f97c326e58f19da449618d22a6ef031a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3951,11 +4013,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5455328368124561498, guid: 81cf1fc8251ae20438dce05316020f42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.87
+      value: -5.27
       objectReference: {fileID: 0}
     - target: {fileID: 5455328368124561498, guid: 81cf1fc8251ae20438dce05316020f42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.19
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5455328368124561498, guid: 81cf1fc8251ae20438dce05316020f42, type: 3}
       propertyPath: m_LocalPosition.z
