@@ -2,33 +2,43 @@ using UnityEngine;
 
 public class Scr_WallSpriteColliders : MonoBehaviour
 {
-    public bool underWall = false;
+    private SpriteRenderer horizontalWallSpriteRenderer;
+    private int playerCollisionCount = 0;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        // Cache the SpriteRenderer component for performance
+        horizontalWallSpriteRenderer = GameObject.Find("Arcade_Interior_HorizontalWalls").GetComponent<SpriteRenderer>();
+        if (horizontalWallSpriteRenderer != null)
         {
-            underWall = true;
+            horizontalWallSpriteRenderer.enabled = false; // Ensure it's initially disabled
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            underWall = false;
+            playerCollisionCount++;
+            UpdateSpriteRendererState();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerCollisionCount--;
+            UpdateSpriteRendererState();
+        }
+    }
+
+    private void UpdateSpriteRendererState()
+    {
+        if (horizontalWallSpriteRenderer != null)
+        {
+            // Enable the SpriteRenderer if the player is colliding with any of the colliders
+            horizontalWallSpriteRenderer.enabled = playerCollisionCount > 0;
         }
     }
 }

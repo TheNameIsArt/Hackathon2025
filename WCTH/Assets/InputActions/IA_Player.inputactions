@@ -15,9 +15,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Inventory",
+                    "name": "Interact",
                     "type": "Button",
-                    "id": "c6814630-a7ac-450e-976f-576dcda1ce0c",
+                    "id": "d12bb83c-c574-459e-8ffd-037dae9bc899",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -159,23 +159,23 @@
                 },
                 {
                     "name": "",
-                    "id": "26958bf5-cae3-466a-a5a2-19ff9ee7ab78",
-                    "path": "<Gamepad>/buttonWest",
+                    "id": "f666ad86-bab1-4b77-9c62-cd3f0a555fa9",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inventory",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "1bfde6a2-01dd-411f-8c8b-944c677b0ff1",
-                    "path": "<Keyboard>/i",
+                    "id": "4c274fd2-468d-4d57-bb94-3a2ff7965f40",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inventory",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
