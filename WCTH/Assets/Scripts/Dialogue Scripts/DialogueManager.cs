@@ -48,17 +48,42 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+        // Find the local camera (Camera_Conversation) if it hasn't been assigned
+        if (localCamera == null)
+        {
+            GameObject parentCamera = GameObject.Find("Camera");
+            if (parentCamera != null)
+            {
+                localCamera = parentCamera.transform.Find("Camera_Conversation")?.GetComponent<CinemachineVirtualCamera>();
+            }
+        }
+
+        // Find the virtual camera (Camera_MainArcade) if it hasn't been assigned
+        if (virtualCamera == null)
+        {
+            GameObject parentCamera = GameObject.Find("Camera");
+            if (parentCamera != null)
+            {
+                virtualCamera = parentCamera.transform.Find("Camera_MainArcade")?.GetComponent<CinemachineVirtualCamera>();
+            }
+        }
+
+        // Check if the conversation is active and switch cameras accordingly
         if (ConversationManager.Instance.IsConversationActive)
         {
             cameraSwitched = true;
-            localCamera = GameObject.Find("Camera_Conversation").GetComponent<CinemachineVirtualCamera>();
-            Scr_CameraController.SwitchCamera(localCamera);
+            if (localCamera != null)
+            {
+                Scr_CameraController.SwitchCamera(localCamera);
+            }
         }
         else if (!ConversationManager.Instance.IsConversationActive && cameraSwitched)
         {
             cameraSwitched = false;
-            virtualCamera = GameObject.Find("Camera_MainArcade").GetComponent<CinemachineVirtualCamera>();
-            Scr_CameraController.SwitchCamera(virtualCamera);
+            if (virtualCamera != null)
+            {
+                Scr_CameraController.SwitchCamera(virtualCamera);
+            }
         }
     }
 }

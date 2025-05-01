@@ -112,7 +112,7 @@ public class Scr_PlayerController : MonoBehaviour
             if (!isConversationActive)
                 speechButton.SetActive(true);
                 speechButton.GetComponent<InteractionButton>().talkSprite = true;
-                ConversationButton.interactable = true;
+                ConversationButton.interactable = true; 
         }
     }
 
