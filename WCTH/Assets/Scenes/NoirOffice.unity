@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 294018980}
   - component: {fileID: 294018979}
+  - component: {fileID: 294018981}
   m_Layer: 0
   m_Name: Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_0
   m_TagString: Untagged
@@ -180,12 +181,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2713620074208715477, guid: d7bf0f7f6715e3f4d81319705b75d301, type: 3}
+  m_Sprite: {fileID: -2713620074208715477, guid: b46ae685194b14745a736e60454f9c5b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10, y: 5.625}
+  m_Size: {x: 3.2, y: 1.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -201,11 +202,33 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3.15, y: 3.15, z: 3.15}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &294018981
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294018978}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 145179f2990e81d4d8e0e3cd40d86011, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &677662792
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +260,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noirColour: {fileID: 2100000, guid: 213be55a1fe77ea43b2c5ba451bdaffb, type: 2}
   Player: {fileID: 0}
+  noirEverything: []
+  noirSelector: {fileID: 0}
 --- !u!4 &677662794
 Transform:
   m_ObjectHideFlags: 0
@@ -388,7 +413,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.688899
+  orthographic size: 2.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -809,7 +834,7 @@ Transform:
   m_GameObject: {fileID: 1357560203}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.56, y: -3.31, z: 0}
+  m_LocalPosition: {x: -2.58, y: -3.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -830,7 +855,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -865,6 +890,14 @@ PrefabInstance:
     - target: {fileID: 861742587253809823, guid: 80669e61c925baa47814b479cbf4ec81, type: 3}
       propertyPath: input
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 861742587253809823, guid: 80669e61c925baa47814b479cbf4ec81, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145413937454490423, guid: 80669e61c925baa47814b479cbf4ec81, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8030167035946091498, guid: 80669e61c925baa47814b479cbf4ec81, type: 3}
       propertyPath: m_LocalPosition.x
