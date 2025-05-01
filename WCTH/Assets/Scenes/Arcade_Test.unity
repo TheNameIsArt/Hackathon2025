@@ -323,6 +323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  isConversationActive: 0
+  ConversationButton: {fileID: 0}
 --- !u!114 &145413148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,7 +740,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.8125
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
