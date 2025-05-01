@@ -1,18 +1,37 @@
+using Unity.VisualScripting;
 using UnityEngine;
-public class CustomItemScript : ItemScript
+using UnityEngine.UI;
+using TMPro;
+public class CustomItemScript : MonoBehaviour
 {
-    [SerializeField] private string customName; // Custom name for this item
-    [SerializeField] private Sprite customImage; // Custom image for this item
-    private GameObject GameObject;
+    [SerializeField] private Sprite itemImage; // The sprite to set
+    [SerializeField] private string itemDescription; // The description to set
+    [SerializeField] private Image targetImage; // The target Image component to update
+    [SerializeField] private TextMeshProUGUI targetText; // The target TMP text component to update
+    [SerializeField] private GameObject targetGameObject;
 
-    // Override the OnButtonClick method to change only the name and image
-    public override void OnButtonClick()
+    // Method to update the target Image and TMP text
+    public void OnButtonClick()
     {
-        // Set the custom name and image
-        textToDisplay = customName;
-        imageToDisplay = customImage;
+        // Update the target Image's sprite
+        if (targetImage != null)
+        {
+            targetImage.sprite = itemImage;
+        }
+        else
+        {
+            Debug.LogWarning($"Target Image is not assigned in {gameObject.name}.");
+        }
 
-        // Call the base implementation to update the TMP text and UI image
-        base.OnButtonClick();
+        // Update the target TMP text's content
+        if (targetText != null)
+        {
+            targetText.text = itemDescription;
+        }
+        else
+        {
+            Debug.LogWarning($"Target TextMeshProUGUI is not assigned in {gameObject.name}.");
+        }
+        targetGameObject.SetActive(true);
     }
 }
