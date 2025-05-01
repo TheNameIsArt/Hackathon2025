@@ -324,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   isConversationActive: 0
-  ConversationButton: {fileID: 0}
+  ConversationButton: {fileID: 4803488524712068571}
 --- !u!114 &145413148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +366,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7d215ad5-6fdd-4171-a638-70df3625f129
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d12bb83c-c574-459e-8ffd-037dae9bc899
+    m_ActionName: 'Player/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1437,6 +1441,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaa1686ef9e5f7a4f98f15c4718eb5ba, type: 3}
+--- !u!114 &4803488524712068571 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8081240720443799761, guid: eaa1686ef9e5f7a4f98f15c4718eb5ba, type: 3}
+  m_PrefabInstance: {fileID: 4803488524712068570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7508552935176137171
 PrefabInstance:
   m_ObjectHideFlags: 0
