@@ -8,6 +8,7 @@ public class DetectiveMode : MonoBehaviour
     public float smoothing = 0.1f; // Smoothing factor for movement
     public float maxVerticalMovement = 500f; // Maximum vertical movement range
     public float flatThreshold = 0.8f; // Threshold for detecting if the phone is flat
+    public GameObject itemDescription;
 
     private bool isGyroEnabled = false;
     private Vector2 smoothedPosition = Vector2.zero;
@@ -51,11 +52,13 @@ public class DetectiveMode : MonoBehaviour
         {
             button1.SetActive(false);
             controlCanvas.enabled = true; // Enable the control canvas
+            itemDescription.SetActive(false);
         }
         else
         {
             button1.SetActive(true);
             controlCanvas.enabled = false; // Disable the control canvas
+            
 
             if (isGyroEnabled && imageToMove != null)
             {
