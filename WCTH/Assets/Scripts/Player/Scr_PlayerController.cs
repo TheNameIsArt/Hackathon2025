@@ -2,6 +2,7 @@ using DialogueEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Scr_PlayerController : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class Scr_PlayerController : MonoBehaviour
     private PlayerInput playerInput;
 
     private string targetSceneName;
-    //private NPCConversation targetConversation;
     private Vector2 moveInput;
     private Rigidbody2D rb;
     private Animator animator;
@@ -19,15 +19,28 @@ public class Scr_PlayerController : MonoBehaviour
     private bool isConversationZone;
     private bool isInteractionZone;
     [SerializeField] private bool isConversationActive = false;
+    [SerializeField] Button ConversationButton;
 
     private ConversationEditer conversationEditor; // Reference to the ConversationEditor
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private GameObject detectiveMode; // Reference to the "Detective Mode" GameObject
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");
+
+        // Find the "Detective Mode" GameObject in the scene
+        detectiveMode = GameObject.Find("Detective Mode");
+        if (detectiveMode == null)
+        {
+            Debug.LogWarning("Detective Mode GameObject not found in the scene.");
+        }
+        else
+        {
+            detectiveMode.SetActive(false); // Ensure it's inactive at the start
+        }
     }
 
     void Start()
@@ -40,12 +53,10 @@ public class Scr_PlayerController : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         rb.linearVelocity = moveInput * moveSpeed;
         Animate();
-
 
         if (ConversationManager.Instance != null)
         {
@@ -90,14 +101,21 @@ public class Scr_PlayerController : MonoBehaviour
         {
             isInteractionZone = true;
             interactionButton.SetActive(true);
+            
+
+            // Enable "Detective Mode" when in the InteractionZone
+            if (detectiveMode != null)
+            {
+                detectiveMode.SetActive(true);
+            }
         }
         else if (collision.gameObject.tag == "ConversationZone")
         {
-            //targetConversation = interactionZone.GetComponent<NPCConversation>();
             conversationEditor = interactionZone.GetComponent<ConversationEditer>();
             isConversationZone = true;
             if (!isConversationActive)
                 interactionButton.SetActive(true);
+                ConversationButton.interactable = true;
         }
     }
 
@@ -110,6 +128,13 @@ public class Scr_PlayerController : MonoBehaviour
                 interactionButton.SetActive(false);
                 isInteractionZone = false;
                 isConversationZone = false;
+                ConversationButton.interactable = false;
+
+                // Disable "Detective Mode" when exiting the InteractionZone
+                if (collision.gameObject.tag == "InteractionZone" && detectiveMode != null)
+                {
+                    detectiveMode.SetActive(false);
+                }
             }
         }
     }
