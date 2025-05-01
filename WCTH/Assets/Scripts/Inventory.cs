@@ -5,16 +5,14 @@ using System.Collections.Generic;
 public class Inventory : MonoBehaviour
 {
     private bool isInventoryOpen = false;
-    private List<string> items = new List<string>();
     [SerializeField]GameObject inventoryCanvas;
+    private List<Item> items = new List<Item>();
+    private InventoryUI inventoryUI;
 
     void Start()
     {
-        // Initialize inventory with some items (optional)
-        items.Add("magnifying glass");
-        items.Add("Notes");
+        inventoryUI = Object.FindFirstObjectByType<InventoryUI>();
 
-        //inventoryCanvas = GameObject.Find("InventoryCanvas");
         CloseInventory();
     }
 
@@ -44,7 +42,6 @@ public class Inventory : MonoBehaviour
         isInventoryOpen = true;
 
         // Activate the Inventory canvas and all its children
-        //GameObject inventoryCanvas = GameObject.Find("InventoryCanvas");
         if (inventoryCanvas != null)
         {
             inventoryCanvas.SetActive(true);
@@ -52,9 +49,16 @@ public class Inventory : MonoBehaviour
 
         Debug.Log("Inventory Opened");
 
-        foreach (var item in items)
+        if (items.Count == 0)
         {
-            Debug.Log("Item: " + item);
+            Debug.Log("No items in the inventory.");
+        }
+        else
+        {
+            foreach (var item in items)
+            {
+                Debug.Log("Item: " + item);
+            }
         }
     }
 
