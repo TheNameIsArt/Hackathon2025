@@ -7,7 +7,7 @@ public class CarlsMinigameManager : MonoBehaviour
     private int lives = 3;
     private int gameOverLifeAmount = 0;
     private int score;
-    private int scoreToWin = 25;
+    private int scoreToWin = 30;
     private float timePlayed;
     public GameObject gameoverUI;
     public GameObject tryAgainUI;
