@@ -12,6 +12,7 @@ public class CarlsMinigameManager : MonoBehaviour
     public TextMeshProUGUI infoText;
     public TextMeshProUGUI scoreText;
 
+
     void Awake()
     {
         Time.timeScale = 1f;
