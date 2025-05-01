@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: b46ae685194b14745a736e60454f9c5b
+guid: 9103fe5006b3e0e4c8a513acacb96e99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2713620074208715477
-    second: Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_0
+      213: -7415105360141034741
+    second: ToolClossetOpen_0
+  - first:
+      213: -5418952771143121026
+    second: ToolClossetOpen_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -114,7 +117,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_0
+      name: ToolClossetOpen_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2d9b6d7be8475ad0800000000000000
-      internalID: -2713620074208715477
+      spriteID: b0bd2bc36f0481990800000000000000
+      internalID: -7415105360141034741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_1
+      name: ToolClossetOpen_1
       rect:
         serializedVersion: 2
         x: 320
@@ -161,32 +164,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4efb94854037384449b41c03263daf31
-      internalID: -258924650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_2
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 320
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0af741f37c7bfb3408f6c48977ffa3b5
-      internalID: -1834613368
+      spriteID: e77456d5a230cc4b0800000000000000
+      internalID: -5418952771143121026
       vertices: []
       indices: 
       edges: []
@@ -195,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 434057de606436b45a602a8971ec8777
+    spriteID: cac3537ab32f2954eb19326437e87331
     internalID: 0
     vertices: []
     indices: 
@@ -205,9 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_0: -2713620074208715477
-      Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_1: -258924650
-      Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_2: -1834613368
+      ToolClossetOpen_0: -7415105360141034741
+      ToolClossetOpen_1: -5418952771143121026
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
