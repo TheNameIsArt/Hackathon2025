@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b46ae685194b14745a736e60454f9c5b
+guid: e9264a404b75b0c40b467cae7b0221c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2713620074208715477
-    second: Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_0
+      213: -7356876566882391630
+    second: Skibidi giga_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,71 +109,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_0
+      name: Skibidi giga_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 180
+        x: 87
+        y: 101
+        width: 114
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 113, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2d9b6d7be8475ad0800000000000000
-      internalID: -2713620074208715477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_1
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 320
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4efb94854037384449b41c03263daf31
-      internalID: -258924650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_2
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 320
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0af741f37c7bfb3408f6c48977ffa3b5
-      internalID: -1834613368
+      spriteID: 2b96496adbf17e990800000000000000
+      internalID: -7356876566882391630
       vertices: []
       indices: 
       edges: []
@@ -182,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 434057de606436b45a602a8971ec8777
+    spriteID: d530861e166a09748afb17a2f220dc4d
     internalID: 0
     vertices: []
     indices: 
@@ -192,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_0: -2713620074208715477
-      Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_1: -258924650
-      Dogshitalos Motherfuckalos Noir Officthian-Sheet 1_2: -1834613368
+      Skibidi giga_0: -7356876566882391630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

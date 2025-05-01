@@ -10,8 +10,9 @@ public class DialogueManager : MonoBehaviour
     private Dictionary<string, string> savedConversationNames = new Dictionary<string, string>();
 
     public CinemachineVirtualCamera localCamera;
-    public CinemachineVirtualCamera virtualCamera;
     public bool cameraSwitched = false;
+
+    private CinemachineVirtualCamera savedLiveCamera; // To store the live camera from the CinemachineBrain
 
     private void Awake()
     {
@@ -58,31 +59,61 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        // Find the virtual camera (Camera_MainArcade) if it hasn't been assigned
-        if (virtualCamera == null)
-        {
-            GameObject parentCamera = GameObject.Find("Camera");
-            if (parentCamera != null)
-            {
-                virtualCamera = parentCamera.transform.Find("Camera_MainArcade")?.GetComponent<CinemachineVirtualCamera>();
-            }
-        }
+        // Get the CinemachineBrain component
+        CinemachineBrain brain = Camera.main?.GetComponent<CinemachineBrain>();
+        if (brain == null) return;
 
         // Check if the conversation is active and switch cameras accordingly
         if (ConversationManager.Instance.IsConversationActive)
         {
-            cameraSwitched = true;
-            if (localCamera != null)
+            if (!cameraSwitched)
             {
-                Scr_CameraController.SwitchCamera(localCamera);
+                cameraSwitched = true;
+
+                // Save the currently active (live) camera from the CinemachineBrain
+                if (brain.ActiveVirtualCamera is CinemachineVirtualCamera virtualCamera)
+                {
+                    savedLiveCamera = virtualCamera;
+                }
+                else
+                {
+                    Debug.LogWarning("Active virtual camera is not a CinemachineVirtualCamera.");
+                }
+
+                if (localCamera != null)
+                {
+                    Scr_CameraController.SwitchCamera(localCamera);
+                }
+                if (localCamera == null)
+                {
+                    GameObject parentCamera = GameObject.Find("Camera");
+                    if (parentCamera != null)
+                    {
+                        localCamera = parentCamera.transform.Find("Camera_Conversation")?.GetComponent<CinemachineVirtualCamera>();
+                        if (localCamera != null)
+                        {
+                            Debug.Log($"localCamera assigned: {localCamera.name}");
+                        }
+                        else
+                        {
+                            Debug.LogWarning("Camera_Conversation not found or does not have a CinemachineVirtualCamera component.");
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Parent camera (Camera) not found.");
+                    }
+                }
             }
         }
         else if (!ConversationManager.Instance.IsConversationActive && cameraSwitched)
         {
             cameraSwitched = false;
-            if (virtualCamera != null)
+
+            // Restore the saved live camera
+            if (savedLiveCamera != null)
             {
-                Scr_CameraController.SwitchCamera(virtualCamera);
+                Scr_CameraController.SwitchCamera(savedLiveCamera);
             }
         }
     }
