@@ -13,7 +13,7 @@ TagManager:
   - itemDescription
   - SpeechButton
   - ConversationZone
-
+  - ControlButtons
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,7 @@ public class SceneFader : MonoBehaviour
     public float fadeDuration = 1f;
     public float fastFadeDuration = 0.7f;
 
-    private void Awake()
+    /*private void Awake()
     {
         if (Instance == null)
         {
@@ -27,7 +27,7 @@ public class SceneFader : MonoBehaviour
 
         if (fadeImage != null)
             fadeImage.enabled = false; // Make sure it's off at start
-    }
+    }*/
 
     private void Start()
     {
