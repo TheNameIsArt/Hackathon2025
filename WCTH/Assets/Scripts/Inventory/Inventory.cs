@@ -90,4 +90,13 @@ public class Inventory : MonoBehaviour
 
         Debug.Log("Inventory Closed");
     }
+
+    private void DisplayItemDescription(Item item)
+    {
+        if (item is IClickable clickable)
+        {
+            Debug.Log($"Item Description: {clickable.Description}");
+            clickable.OnClick();
+        }
+    }
 }
