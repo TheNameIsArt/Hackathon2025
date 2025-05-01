@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EarlyGameScenes/FootageCutscene.unity
     guid: 9aa0bd12c385165449b9902741bf3322
+  - enabled: 1
+    path: Assets/Scenes/EarlyGameScenes/5.unity
+    guid: 5051d185c1f40f140b7945ba8a04895e
+  - enabled: 0
+    path: Assets/Scenes/EarlyGameScenes/6.unity
+    guid: 667944d2fd01b384e93747f91fd0f055
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: dc45634ec6f973f48bd9c73432889c96, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1c5794afdf246be4b84184605d2c03a4, type: 2}
