@@ -8,6 +8,7 @@ public class Scr_InventroyTest : MonoBehaviour
     [SerializeField] private GameObject tp;
     [SerializeField] private GameObject videoTape;
     [SerializeField] private GameObject concertTicket;
+    [SerializeField] private GameObject note;
     [SerializeField] private GameObject balloon;
 
     [SerializeField] private GameObject inventoryManager;
@@ -122,12 +123,22 @@ public class Scr_InventroyTest : MonoBehaviour
         if (context.performed)
         {
             Debug.Log("Inventory 6 Pressed");
+            note.SetActive(true);
+            note.transform.position = itemPosition.position;
+            itemsFound++;
+        }
+    }
+    public void Inventory7(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Inventory 7 Pressed");
             balloon.SetActive(true);
             balloon.transform.position = itemPosition.position;
             itemsFound++;
         }
     }
-    public void Inventory7(InputAction.CallbackContext context)
+    public void Inventory8(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
