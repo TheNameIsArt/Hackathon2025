@@ -13,6 +13,8 @@ public class DetectiveMode : MonoBehaviour
     private Vector2 smoothedPosition = Vector2.zero;
     public Canvas controlCanvas; // Reference to the control canvas
 
+    public bool isInteractEnabled = true; // Boolean to control Update execution
+
     void Start()
     {
         // Enable the gyroscope if supported
@@ -29,6 +31,12 @@ public class DetectiveMode : MonoBehaviour
 
     void Update()
     {
+        // Check if Update is enabled
+        if (!isInteractEnabled)
+        {
+            return;
+        }
+
         // Get the accelerometer data
         Vector3 acceleration = Input.acceleration;
 
