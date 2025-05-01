@@ -22,6 +22,6 @@ public class Item : IClickable
         // Handle what happens when the item is clicked
         Debug.Log($"Item clicked: {itemName}. Description: {Description}");
 
-        DisplayItemDescription();
+        //DisplayItemDescription();
     }
 }
