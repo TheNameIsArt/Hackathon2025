@@ -6,10 +6,7 @@ public class Player_Inventory : MonoBehaviour
     [SerializeField] private GameObject inventoryCanvas;
     [SerializeField] private GameObject controlCanvas;
 
-
     public bool isInventoryOpen = false;
-
-    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,7 +17,7 @@ public class Player_Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        
     }
 
     public void ToggleInventory(InputAction.CallbackContext context)
