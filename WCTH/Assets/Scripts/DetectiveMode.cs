@@ -9,12 +9,14 @@ public class DetectiveMode : MonoBehaviour
     public float maxVerticalMovement = 500f; // Maximum vertical movement range
     public float flatThreshold = 0.8f; // Threshold for detecting if the phone is flat
     public GameObject itemDescription;
+    public GameObject tutorial; // Reference to the tutorial GameObject
 
     private bool isGyroEnabled = false;
     private Vector2 smoothedPosition = Vector2.zero;
     public Canvas controlCanvas; // Reference to the control canvas
 
     public bool isInteractEnabled = true; // Boolean to control Update execution
+    public bool tutorialIsActive = false; // Boolean to control tutorial visibility
 
     void Start()
     {
@@ -53,12 +55,20 @@ public class DetectiveMode : MonoBehaviour
             button1.SetActive(false);
             controlCanvas.enabled = true; // Enable the control canvas
             itemDescription.SetActive(false);
+            tutorial.SetActive(false); // Hide the tutorial
+            tutorialIsActive = false; // Set the tutorial as inactive
         }
         else
         {
             button1.SetActive(true);
             controlCanvas.enabled = false; // Disable the control canvas
-            
+            if (tutorial != null && !tutorialIsActive)
+            {
+                tutorialIsActive = true; // Set the tutorial as active
+                tutorial.SetActive(true); // Show the tutorial
+            }
+                
+
 
             if (isGyroEnabled && imageToMove != null)
             {
