@@ -16,6 +16,7 @@ public class Scr_PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private GameObject interactionButton;
+    private GameObject speechButton;
     private bool isConversationZone;
     private bool isInteractionZone;
     [SerializeField] private bool isConversationActive = false;
@@ -30,17 +31,9 @@ public class Scr_PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         interactionButton = GameObject.FindGameObjectWithTag("InteractionButton");
+        speechButton = GameObject.FindGameObjectWithTag("SpeechButton");
 
-        // Find the "Detective Mode" GameObject in the scene
-        detectiveMode = GameObject.Find("Detective Mode");
-        if (detectiveMode == null)
-        {
-            Debug.LogWarning("Detective Mode GameObject not found in the scene.");
-        }
-        else
-        {
-            detectiveMode.SetActive(false); // Ensure it's inactive at the start
-        }
+
     }
 
     void Start()
@@ -101,7 +94,8 @@ public class Scr_PlayerController : MonoBehaviour
         {
             isInteractionZone = true;
             interactionButton.SetActive(true);
-            
+            detectiveMode = interactionZone.GetComponent<InteractionZone>().detectiveMode;
+
 
             // Enable "Detective Mode" when in the InteractionZone
             if (detectiveMode != null)
@@ -114,7 +108,7 @@ public class Scr_PlayerController : MonoBehaviour
             conversationEditor = interactionZone.GetComponent<ConversationEditer>();
             isConversationZone = true;
             if (!isConversationActive)
-                interactionButton.SetActive(true);
+                speechButton.SetActive(true);
                 ConversationButton.interactable = true;
         }
     }
@@ -126,6 +120,7 @@ public class Scr_PlayerController : MonoBehaviour
             if (collision.gameObject.tag == "InteractionZone" || collision.gameObject.tag == "ConversationZone")
             {
                 interactionButton.SetActive(false);
+                speechButton.SetActive(false);
                 isInteractionZone = false;
                 isConversationZone = false;
                 ConversationButton.interactable = false;
@@ -153,6 +148,10 @@ public class Scr_PlayerController : MonoBehaviour
                 {
                     conversationEditor.PlayConversation();
                     Debug.Log("Conversation started!");
+                }
+                else
+                {
+                    Debug.LogWarning("ConversationEditor component not found on the GameObject.");
                 }
                 playerInput.enabled = false; // Disable the PlayerInput component
                 interactionButton.SetActive(false); // Hide the interaction button

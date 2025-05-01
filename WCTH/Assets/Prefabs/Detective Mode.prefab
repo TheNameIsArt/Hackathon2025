@@ -51,6 +51,7 @@ MonoBehaviour:
   maxVerticalMovement: 1080
   flatThreshold: 0.8
   controlCanvas: {fileID: 0}
+  isInteractEnabled: 1
 --- !u!1 &2565949013014077656
 GameObject:
   m_ObjectHideFlags: 0
