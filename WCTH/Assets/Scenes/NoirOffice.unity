@@ -893,11 +893,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 861742587253809823, guid: 80669e61c925baa47814b479cbf4ec81, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 861742587253809823, guid: 80669e61c925baa47814b479cbf4ec81, type: 3}
+      propertyPath: inputActions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 09a0d0d08648c674fa2f666b47fc6947, type: 3}
     - target: {fileID: 5145413937454490423, guid: 80669e61c925baa47814b479cbf4ec81, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8030167035946091498, guid: 80669e61c925baa47814b479cbf4ec81, type: 3}
       propertyPath: m_LocalPosition.x
