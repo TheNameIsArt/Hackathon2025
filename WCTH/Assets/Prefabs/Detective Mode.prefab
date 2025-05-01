@@ -50,6 +50,7 @@ MonoBehaviour:
   smoothing: 0.1
   maxVerticalMovement: 1080
   flatThreshold: 0.8
+  itemDescription: {fileID: 6164083553060351964}
   controlCanvas: {fileID: 0}
   isInteractEnabled: 1
 --- !u!1 &2565949013014077656
@@ -61,7 +62,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8826507710370545270}
-  - component: {fileID: 2924685914125944509}
   m_Layer: 5
   m_Name: Item Gained box
   m_TagString: Untagged
@@ -89,18 +89,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2924685914125944509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2565949013014077656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3bb0bf879c3f44f929a2e85b9ae0ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3700468146183388788
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7254508593461948694
 Transform:
   m_ObjectHideFlags: 0
@@ -518,8 +506,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8cafe417e51844a95bac6a0eb265ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customName: YOYOYO
-  customImage: {fileID: 7646906756991398053, guid: 11af2da1a414c104da5b16aeaa6f7915, type: 3}
+  itemImage: {fileID: 7646906756991398053, guid: 11af2da1a414c104da5b16aeaa6f7915, type: 3}
+  itemDescription: YEYEYEYYA
+  targetImage: {fileID: 5883531769911616649}
+  targetText: {fileID: 826822527449239163}
+  targetGameObject: {fileID: 6164083553060351964}
 --- !u!1 &5898490031514421112
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3271099452380240289}
+  - component: {fileID: 1727107171181095568}
   m_Layer: 5
   m_Name: Item Box
   m_TagString: itemDescription
@@ -695,6 +687,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1727107171181095568
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164083553060351964}
+  m_CullTransparentMesh: 1
 --- !u!1 &7140927521915054444
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,7 +940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2946303976905964167}
   - component: {fileID: 1285541070499660933}
-  - component: {fileID: 5900070312154337993}
+  - component: {fileID: 5883531769911616649}
   m_Layer: 5
   m_Name: Image
   m_TagString: itemPic
@@ -975,7 +975,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7364525798289835504}
   m_CullTransparentMesh: 1
---- !u!114 &5900070312154337993
+--- !u!114 &5883531769911616649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
