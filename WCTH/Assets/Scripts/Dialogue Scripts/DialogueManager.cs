@@ -1,3 +1,4 @@
+using Cinemachine;
 using DialogueEditor;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,10 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
 
     private Dictionary<string, string> savedConversationNames = new Dictionary<string, string>();
+
+    public CinemachineVirtualCamera localCamera;
+    public CinemachineVirtualCamera virtualCamera;
+    public bool cameraSwitched = false;
 
     private void Awake()
     {
@@ -38,6 +43,22 @@ public class DialogueManager : MonoBehaviour
         if (conversation != null)
         {
             savedConversationNames[characterID] = conversation.name;
+        }
+    }
+
+    private void Update()
+    {
+        if (ConversationManager.Instance.IsConversationActive)
+        {
+            cameraSwitched = true;
+            localCamera = GameObject.Find("Camera_Conversation").GetComponent<CinemachineVirtualCamera>();
+            Scr_CameraController.SwitchCamera(localCamera);
+        }
+        else if (!ConversationManager.Instance.IsConversationActive && cameraSwitched)
+        {
+            cameraSwitched = false;
+            virtualCamera = GameObject.Find("Camera_MainArcade").GetComponent<CinemachineVirtualCamera>();
+            Scr_CameraController.SwitchCamera(virtualCamera);
         }
     }
 }

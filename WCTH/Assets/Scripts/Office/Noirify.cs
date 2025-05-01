@@ -5,7 +5,6 @@ public class Noirify : MonoBehaviour
     // Assign the material to greyscale player character
     [SerializeField] private Material noirColour;
     [SerializeField] private GameObject Player;
-    private Scr_PlayerController playerController;
 
     void Awake()
     {

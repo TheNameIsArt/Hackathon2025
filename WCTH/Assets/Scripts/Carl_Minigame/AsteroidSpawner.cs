@@ -3,16 +3,14 @@ using UnityEngine;
 public class AsteroidSpawner : MonoBehaviour
 {
     public AsteroidPool asteroidPool;
-    private float spawnInterval = 1f;
-    private float minYSpawn = -3f;
-    private float maxYSpawn = 3f;
+    private float spawnInterval = 0.1f; //Normal spawnInterval 1
+    private float minYSpawn = -4f;
+    private float maxYSpawn = 4;
     private float xSpawn = 12;
 
-    private float moveSpeed = 5f;
+    private float moveSpeed = 15f; //Normal speed 5
 
     private float timer;
-
-    private float deadZone = 12f;
     void Update()
     {
         timer += Time.deltaTime;

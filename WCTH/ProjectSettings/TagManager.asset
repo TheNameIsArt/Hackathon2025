@@ -4,7 +4,16 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Asteroid
   - Wall
+  - InteractionZone
+  - InteractionButton
+  - itemTxt
+  - itemPic
+  - itemDescription
+  - SpeechButton
+  - ConversationZone
+
   layers:
   - Default
   - TransparentFX
