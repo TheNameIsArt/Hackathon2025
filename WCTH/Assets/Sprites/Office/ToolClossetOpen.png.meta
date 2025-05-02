@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 2caecae1dc98e6445a132fa16dbb0e63
+guid: 9103fe5006b3e0e4c8a513acacb96e99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2280659014685946480
-    second: detective frame tim frame paper_0
+      213: -7415105360141034741
+    second: ToolClossetOpen_0
+  - first:
+      213: -5418952771143121026
+    second: ToolClossetOpen_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +112,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: detective frame tim frame paper_0
+      name: ToolClossetOpen_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
-        height: 90
+        width: 320
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 072f5285a4786af10800000000000000
-      internalID: 2280659014685946480
+      spriteID: b0bd2bc36f0481990800000000000000
+      internalID: -7415105360141034741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToolClossetOpen_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 320
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77456d5a230cc4b0800000000000000
+      internalID: -5418952771143121026
       vertices: []
       indices: 
       edges: []
@@ -138,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cac3537ab32f2954eb19326437e87331
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      detective frame tim frame paper_0: 2280659014685946480
+      ToolClossetOpen_0: -7415105360141034741
+      ToolClossetOpen_1: -5418952771143121026
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

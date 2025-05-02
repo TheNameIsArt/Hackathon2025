@@ -5,8 +5,6 @@ public class Noirify : MonoBehaviour
     // Assign the material to greyscale player character
     [SerializeField] private Material noirColour;
     [SerializeField] private GameObject Player;
-    [SerializeField] private GameObject[] noirEverything;
-    [SerializeField] private GameObject noirSelector;
 
 
     void Awake()
@@ -26,11 +24,6 @@ public class Noirify : MonoBehaviour
         Player.GetComponent<Renderer>().material = noirColour;
         Debug.Log("Added Noir material");
 
-        /*foreach (GameObject go in noirEverything)
-        {
-            noirSelector = GameObject.FindGameObjectWithTag("Untagged");
-            noirSelector.GetComponent<Renderer>().material = noirColour;
-        }*/
 
     }
 

@@ -1146,7 +1146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2abea787c0130498cf0f721b2b9f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
 --- !u!1001 &389549914
+
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1154,25 +1156,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 653550303199867701, guid: 24f757cd5de14874db02c630745c869b, type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 653550303199867701, guid: 24f757cd5de14874db02c630745c869b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1923048048735076204, guid: 24f757cd5de14874db02c630745c869b, type: 3}
-      propertyPath: botAnimation
-      value: 
-      objectReference: {fileID: 7400000, guid: 4740c3cb282f02745a94462d94649729, type: 2}
-    - target: {fileID: 1976125642312169622, guid: 24f757cd5de14874db02c630745c869b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 1976125642312169622, guid: 24f757cd5de14874db02c630745c869b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.74
+- target: {fileID: 653550303199867701, guid: 24f757cd5de14874db02c630745c869b, type: 3}
+  propertyPath: m_FlipX
+  value: 1
+  objectReference: {fileID: 0}
+- target: {fileID: 653550303199867701, guid: 24f757cd5de14874db02c630745c869b, type: 3}
+  propertyPath: m_SortingOrder
+  value: 0
+  objectReference: {fileID: 0}
+- target: {fileID: 1923048048735076204, guid: 24f757cd5de14874db02c630745c869b, type: 3}
+  propertyPath: botAnimation
+  value: 
+  objectReference: {fileID: 7400000, guid: 8a8ce26c14dc8ed4fa55a4c647aa0268, type: 2}
+- target: {fileID: 1976125642312169622, guid: 24f757cd5de14874db02c630745c869b, type: 3}
+  propertyPath: m_LocalPosition.x
+  value: 8.11
+  objectReference: {fileID: 0}
+- target: {fileID: 1976125642312169622, guid: 24f757cd5de14874db02c630745c869b, type: 3}
+  propertyPath: m_LocalPosition.y
+  value: -14.5
+  objectReference: {fileID: 0}
       objectReference: {fileID: 0}
     - target: {fileID: 1976125642312169622, guid: 24f757cd5de14874db02c630745c869b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1208,7 +1211,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7834403020073096862, guid: 24f757cd5de14874db02c630745c869b, type: 3}
       propertyPath: m_Name
+
       value: Pinboy (1)
+
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2115,7 +2120,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 2.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2140,7 +2145,9 @@ Transform:
   m_GameObject: {fileID: 1017735510}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+
   m_LocalPosition: {x: 6.237339, y: 1.6316547, z: 0.12225723}
+
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2749,7 +2756,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 7
   TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 2413963981052642046, guid: 11af2da1a414c104da5b16aeaa6f7915, type: 3}
   Audio: {fileID: 0}
 --- !u!4 &1231771777
 Transform:
@@ -2783,7 +2790,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 6
   TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: -4899026290366656597, guid: 8e292edd5cbb6d54f99674af04c8c321, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1231771779
 MonoBehaviour:
@@ -2802,7 +2809,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 5
   TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 4395997364326324606, guid: 2fb59853e3b02854994065896a82487c, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1231771780
 MonoBehaviour:
@@ -2821,7 +2828,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 4
   TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 2838231755752363713, guid: 11af2da1a414c104da5b16aeaa6f7915, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1231771781
 MonoBehaviour:
@@ -2840,7 +2847,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 3
   TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 7775990671468807654, guid: 310fb0a4bc376ef4c8fbb748bb14f53e, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1231771782
 MonoBehaviour:
@@ -2859,7 +2866,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 2
   TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 2838231755752363713, guid: 11af2da1a414c104da5b16aeaa6f7915, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1231771783
 MonoBehaviour:
@@ -2878,7 +2885,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 1
   TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 4395997364326324606, guid: 2fb59853e3b02854994065896a82487c, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1231771784
 MonoBehaviour:
@@ -2897,7 +2904,9 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 0
   TMPFont: {fileID: 0}
+
   Icon: {fileID: 7775990671468807654, guid: 310fb0a4bc376ef4c8fbb748bb14f53e, type: 3}
+
   Audio: {fileID: 0}
 --- !u!114 &1231771785
 MonoBehaviour:
@@ -2916,7 +2925,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 10
   TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: -7363530579060095067, guid: 8e292edd5cbb6d54f99674af04c8c321, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1231771786
 MonoBehaviour:
@@ -2935,7 +2944,7 @@ MonoBehaviour:
       m_Calls: []
   NodeID: 9
   TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
+  Icon: {fileID: 4395997364326324606, guid: 2fb59853e3b02854994065896a82487c, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1231771787
 MonoBehaviour:
@@ -3284,8 +3293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 13
-  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":208.000031,\"yPos\":1147.80054},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"End\",\"parentUIDs\":[10],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":147.600021,\"yPos\":91.6},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Buhuhu!
+CurrentIDCounter: 13
+json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":208.000031,\"yPos\":1147.80054},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"End\",\"parentUIDs\":[10],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":147.600021,\"yPos\":91.6},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Buhuhu!
     *Sniff*\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Widow\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":156.000031,\"yPos\":190.800018},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hey
     Andy, this is the Widow\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Pinboy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":165.000031,\"yPos\":292.7998},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oh,
     I\u2019m sorry. Did your husband pass recently?\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":4}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":166.000031,\"yPos\":397.799866},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Husband?
@@ -3298,6 +3307,7 @@ MonoBehaviour:
     somebody tampered with the machine?\u201D\\n\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Andy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":184.500031,\"yPos\":922.799561},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"This
     cant be!!!!!!!! \\\"Pinboy runs into his office\\\".\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Pinboy\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":176.500031,\"yPos\":1033.80029},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Or
     maybe the original math is wrong and it actually is possible to get that score\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Al-liot\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}
@@ -5331,6 +5341,7 @@ SceneRoots:
   - {fileID: 899859264}
   - {fileID: 143404689}
   - {fileID: 104812980}
+  - {fileID: 257863020}
   - {fileID: 689325605}
   - {fileID: 75441848}
   - {fileID: 179852472}
