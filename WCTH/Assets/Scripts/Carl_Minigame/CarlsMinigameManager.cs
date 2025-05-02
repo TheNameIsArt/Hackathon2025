@@ -11,6 +11,7 @@ public class CarlsMinigameManager : MonoBehaviour
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI infoText;
     public TextMeshProUGUI scoreText;
+    public string gameOverSceneName; // Add this line
 
     void Awake()
     {
@@ -18,42 +19,39 @@ public class CarlsMinigameManager : MonoBehaviour
     }
     void Start()
     {
-        livesText.text ="Lives remaining: " + lives + "/3";
-        scoreText.text ="Score: ";
+        livesText.text = "Lives remaining: " + lives + "/3";
+        scoreText.text = "Score: ";
     }
 
     void Update()
     {
         livesText.text = "Lives remaining: " + lives + "/3";
-        
+
         timePlayed += Time.deltaTime;
-        scoreText.text ="Score: " + Mathf.FloorToInt(timePlayed); //Mathf runder til hele tal
-        
+        scoreText.text = "Score: " + Mathf.FloorToInt(timePlayed); //Mathf runder til hele tal
+
         if (lives <= gameOverLifeAmount)
         {
             GameOver();
         }
-
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Asteroid"))
         {
-            lives --;
+            lives--;
             Debug.Log("Life lost!");
             collision.gameObject.SetActive(false);
-
         }
     }
 
     void GameOver()
     {
         Debug.Log("game over!");
-        Time.timeScale = 0f; //Game gets paused
+        Time.timeScale = 0f; // Game gets paused
         gameoverUI.SetActive(true);
+        SceneManager.LoadScene(gameOverSceneName); // Add this line
     }
 
     public void TryAgain()

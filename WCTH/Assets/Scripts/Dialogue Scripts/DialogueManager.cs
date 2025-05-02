@@ -10,8 +10,9 @@ public class DialogueManager : MonoBehaviour
     private Dictionary<string, string> savedConversationNames = new Dictionary<string, string>();
 
     public CinemachineVirtualCamera localCamera;
-    public CinemachineVirtualCamera virtualCamera;
     public bool cameraSwitched = false;
+
+    private CinemachineVirtualCamera savedLiveCamera; // To store the live camera from the CinemachineBrain
 
     private void Awake()
     {
@@ -58,31 +59,40 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        // Find the virtual camera (Camera_MainArcade) if it hasn't been assigned
-        if (virtualCamera == null)
+        // Get the CinemachineBrain component
+        CinemachineBrain brain = Camera.main?.GetComponent<CinemachineBrain>();
+        if (brain == null)
         {
-            GameObject parentCamera = GameObject.Find("Camera");
-            if (parentCamera != null)
-            {
-                virtualCamera = parentCamera.transform.Find("Camera_MainArcade")?.GetComponent<CinemachineVirtualCamera>();
-            }
+            return;
         }
 
         // Check if the conversation is active and switch cameras accordingly
         if (ConversationManager.Instance.IsConversationActive)
         {
-            cameraSwitched = true;
-            if (localCamera != null)
+            if (!cameraSwitched)
             {
-                Scr_CameraController.SwitchCamera(localCamera);
+                cameraSwitched = true;
+
+                // Save the currently active (live) camera from the CinemachineBrain
+                if (brain.ActiveVirtualCamera is CinemachineVirtualCamera virtualCamera)
+                {
+                    savedLiveCamera = virtualCamera;
+                }
+
+                if (localCamera != null)
+                {
+                    Scr_CameraController.SwitchCamera(localCamera);
+                }
             }
         }
         else if (!ConversationManager.Instance.IsConversationActive && cameraSwitched)
         {
             cameraSwitched = false;
-            if (virtualCamera != null)
+
+            // Restore the saved live camera
+            if (savedLiveCamera != null)
             {
-                Scr_CameraController.SwitchCamera(virtualCamera);
+                Scr_CameraController.SwitchCamera(savedLiveCamera);
             }
         }
     }
