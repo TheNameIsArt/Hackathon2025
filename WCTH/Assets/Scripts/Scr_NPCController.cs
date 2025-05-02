@@ -15,6 +15,6 @@ public class Scr_NPCController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        animator.Play(botAnimation.name);
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2caecae1dc98e6445a132fa16dbb0e63
+guid: 0709d4df9af4d0149b938d171bf00c4a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2280659014685946480
-    second: detective frame tim frame paper_0
+      213: -2986818500251847579
+    second: Main menu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: detective frame tim frame paper_0
+      name: Main menu_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
-        height: 90
+        width: 320
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 072f5285a4786af10800000000000000
-      internalID: 2280659014685946480
+      spriteID: 5647ceb1660bc86d0800000000000000
+      internalID: -2986818500251847579
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      detective frame tim frame paper_0: 2280659014685946480
+      Main menu_0: -2986818500251847579
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
