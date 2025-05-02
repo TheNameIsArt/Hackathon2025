@@ -49,7 +49,7 @@ public class CarlsMinigameManager : MonoBehaviour
     void GameOver()
     {
         Debug.Log("game over!");
-        Time.timeScale = 0f; // Game gets paused
+        //Time.timeScale = 0f; // Game gets paused
         gameoverUI.SetActive(true);
         SceneManager.LoadScene(gameOverSceneName); // Add this line
     }
