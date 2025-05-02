@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Interaction_Test.unity
     guid: 8a4bd846cadf3674586e9c2cb5a38fa5
   - enabled: 1
+    path: Assets/Scenes/EarlyGameScenes/1 cutscene.unity
+    guid: b6b58df8b4ddfa64da19afa3a9f764ad
+  - enabled: 1
     path: Assets/Scenes/EarlyGameScenes/2.unity
     guid: 204b455c7e5da5b4c8542c0876317ea2
   - enabled: 1
