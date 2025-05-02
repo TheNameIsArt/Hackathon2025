@@ -540,6 +540,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3813544785160971390, guid: a38d2686836931147a3d74209ea2817c, type: 3}
+      propertyPath: OptionImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 2e97d457a1d065a43b6e5b7e14f467f1, type: 3}
+    - target: {fileID: 3813544785160971390, guid: a38d2686836931147a3d74209ea2817c, type: 3}
+      propertyPath: BackgroundImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 9cd6fe13e20baa841887ab3f075ddadb, type: 3}
+    - target: {fileID: 3813544785160971391, guid: a38d2686836931147a3d74209ea2817c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 620
+      objectReference: {fileID: 0}
     - target: {fileID: 6677980671601673456, guid: a38d2686836931147a3d74209ea2817c, type: 3}
       propertyPath: m_Name
       value: DialogueSystemCanvas
