@@ -769,7 +769,7 @@ PrefabInstance:
       objectReference: {fileID: 332223616}
     - target: {fileID: 6326376800398829230, guid: c1f18203c5e415c409cc8a18cb008052, type: 3}
       propertyPath: gameOverSceneName
-      value: Inventory_Test
+      value: OpenWorld
       objectReference: {fileID: 0}
     - target: {fileID: 8702492531197321869, guid: c1f18203c5e415c409cc8a18cb008052, type: 3}
       propertyPath: m_Name

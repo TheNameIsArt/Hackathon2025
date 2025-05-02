@@ -24,14 +24,11 @@ EditorBuildSettings:
     path: Assets/Scenes/EarlyGameScenes/6.unity
     guid: 667944d2fd01b384e93747f91fd0f055
   - enabled: 1
+    path: Assets/Scenes/EarlyGameScenes/8.unity
+    guid: d24007b0a40f0d746b6be4651ff2fe9d
+  - enabled: 1
     path: Assets/Scenes/OpenWorld/OpenWorld.unity
     guid: 9ddd2f86ccec08c4c86f93a2f2bd0c94
-  - enabled: 1
-    path: Assets/Scenes/Carl_Hard.unity
-    guid: 82d82e11f980d1c4894d6a5a3d3ea44a
-  - enabled: 1
-    path: Assets/Scenes/Inventory_Test.unity
-    guid: 83fff4df45f9a6a499539987361f17b8
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: dc45634ec6f973f48bd9c73432889c96, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1c5794afdf246be4b84184605d2c03a4, type: 2}
