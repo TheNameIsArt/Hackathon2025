@@ -1771,7 +1771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPool: {fileID: 2044577726}
-  cheatCode: 0
+  cheatCode: 1
 --- !u!4 &1382294336
 Transform:
   m_ObjectHideFlags: 0
