@@ -55,7 +55,11 @@ public class DetectiveMode : MonoBehaviour
             button1.SetActive(false);
             controlCanvas.enabled = true; // Enable the control canvas
             itemDescription.SetActive(false);
-            tutorial.SetActive(false); // Hide the tutorial
+            if (tutorial != null)
+            {
+                tutorial.SetActive(false); // Hide the tutorial
+            }
+            
             tutorialIsActive = false; // Set the tutorial as inactive
         }
         else
@@ -83,6 +87,13 @@ public class DetectiveMode : MonoBehaviour
                 newPosition.y = Mathf.Clamp(newPosition.y, -maxVerticalMovement, maxVerticalMovement);
                 imageToMove.anchoredPosition = newPosition;
             }
+        }
+    }
+    void OnDisable()
+    {
+        if (controlCanvas != null)
+        {
+            controlCanvas.enabled = true; // Enable the control canvas
         }
     }
 }
