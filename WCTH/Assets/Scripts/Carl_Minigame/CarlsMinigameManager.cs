@@ -8,6 +8,7 @@ public class CarlsMinigameManager : MonoBehaviour
     private int gameOverLifeAmount = 0;
     private float timePlayed;
     public GameObject gameoverUI;
+    public GameObject winUI;
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI infoText;
     public TextMeshProUGUI scoreText;
@@ -34,6 +35,11 @@ public class CarlsMinigameManager : MonoBehaviour
         {
             GameOver();
         }
+
+        if (scoreText.text == "Score: 30")
+        {
+            Win();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,11 +57,19 @@ public class CarlsMinigameManager : MonoBehaviour
         Debug.Log("game over!");
         //Time.timeScale = 0f; // Game gets paused
         gameoverUI.SetActive(true);
-        SceneManager.LoadScene(gameOverSceneName); // Add this line
+        //SceneManager.LoadScene(gameOverSceneName); // Add this line
     }
 
     public void TryAgain()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Win()
+    {
+        Debug.Log("game over!");
+        //Time.timeScale = 0f; // Game gets paused
+        winUI.SetActive(true);
+        //SceneManager.LoadScene(gameOverSceneName); // Add this line
     }
 }
