@@ -10,7 +10,6 @@ public class Scr_CameraController : MonoBehaviour
 
     public static CinemachineVirtualCamera ActiveCamera = null;
 
-
     public static bool IsCameraActive(CinemachineVirtualCamera camera)
     {
         return camera == ActiveCamera;
