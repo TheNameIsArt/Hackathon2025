@@ -12,23 +12,6 @@ public class SceneFader : MonoBehaviour
     public float fadeDuration = 1f;
     public float fastFadeDuration = 0.7f;
 
-    /*private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        if (fadeImage != null)
-            fadeImage.enabled = false; // Make sure it's off at start
-    }*/
-
     private void Start()
     {
         StartCoroutine(FadeFromBlack());
